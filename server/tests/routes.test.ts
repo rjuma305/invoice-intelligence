@@ -1,4 +1,7 @@
 // Tests for API routes will be defined here.
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
 
 const request = require('supertest');
 const app = require('../index');
