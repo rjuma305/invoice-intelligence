@@ -1,8 +1,10 @@
-// Express app and middleware setup will go here.
-
 const express = require('express');
+const routes = require('./routes');
+
 const app = express();
 
-// Middleware and routes setup
+app.use(express.json());
+app.use('/api', routes);
 
 module.exports = app;
+
